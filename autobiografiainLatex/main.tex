@@ -1,0 +1,23 @@
+\documentclass{book}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{color}
+\usepackage{graphicx}
+\usepackage{enumerate}
+\begin{document}
+	\frontmatter
+		\include{portada/portada}
+		\tableofcontents
+		\listoffigures
+		\listoftables
+	\mainmatter
+		\include{oneChapter/oneChapter}
+		\include{twoChapter/twoChapter}
+		\include{treeChapter/treeChapter}
+		\include{fourChapter/fourChapter}
+		\include{fiveChapter/fiveChapter}
+		\include{sixChapter/sixChapter}		
+	\backmatter
+		\bibliographystyle{opalike}
+		\bibliography{bibliografia}
+\end{document}

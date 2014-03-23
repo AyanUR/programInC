@@ -1,0 +1,32 @@
+//configuracion basica
+git config --global user.name "tu nombre"
+git config --global user.email "<tu email>"
+ssh-keygen //este comando nos pedira una carpeta donde guardar la llave dejamos la de defaul  y despues una contraseña
+cat ~/.shh/id_rsa.pub//copiamos todo loque nos aroge este comando y nos vamos a configuracion en github despues en ssh key, agregamos un titulo el que queramos y abajo pegamos lo que nos arojo el comando cat ~/.ssh/id_rsa.pub
+//ir ala carpeta donde queremos agregar cosas
+git init 
+git add nombre de la carpeta o archivo con extencion a añadiro o .(git add test) o (git add .) //con el punto agrega todo
+git commit -m 'comentario de los cambios echos'
+git remote add origin https://github.com/AyanUR/PrograminC
+git remote rm origin //solo si el comando anterior no funciono ejecutamos este y despues el anterior
+git push -f origin master //para añadir los cambios
+
+
+
+
+//configuracion de usuario
+git config --global user.name "tu nombre"
+git config --global user.email "<tu email>"
+//crear repositorio
+//ir ala carpeta donde inicializar git
+git init nombrearchivoaañair o . para añadir todo
+git rm nombredelarchivoaeliminar
+git clone https://github.com/AyanUR/PrograminC //clona el repositorio
+git status
+git config core.editor "vim"
+git commit
+git log //ver los commit
+git branch nombredelanuevarama
+git branch //muestra las ramas y con un asterisco en la que nos encontramos
+git checkout nombredelaramaamoverse
+git branch -d nombredelaramaaeliminar

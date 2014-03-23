@@ -1,0 +1,10 @@
+\select@language {spanish}
+\contentsline {chapter}{\numberline {1}birth}{1}
+\contentsline {section}{\numberline {1.1}born}{1}
+\contentsline {section}{\numberline {1.2}baby}{1}
+\contentsline {chapter}{\numberline {2}infancia}{3}
+\contentsline {chapter}{\numberline {3}Primaria}{5}
+\contentsline {chapter}{\numberline {4}pubertad}{7}
+\contentsline {chapter}{\numberline {5}adolecencia}{9}
+\contentsline {chapter}{\numberline {6}adolecencia y universidad}{11}
+\contentsline {section}{\numberline {6.1}universidad}{11}
