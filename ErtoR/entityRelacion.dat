@@ -1,0 +1,11 @@
+E-Alumno
+s-boleta
+c-nombreCompleto-s-nombre,apPat,apMat
+k-boleta
+m-telefono
+;
+E-Materia
+s-nombre,semestre,creditos
+k-nombre,semestre
+;
+r-cursa-<Alumno,<Materia|m:n|p:t|s-finicio,ffinal
