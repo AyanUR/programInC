@@ -24,6 +24,7 @@ int main(int ari,char **arc){
 	//showList(cab);
 	//showCompuestos();
 	showTable(table);
+	putTableinFile(table,"relacional.dat","w");
 	fclose(pf);
 	puts("");return 0;
 }

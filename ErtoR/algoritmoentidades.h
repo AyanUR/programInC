@@ -5,9 +5,6 @@
 #include "algoritmorelaciones.h"
 #ifndef __ALGORITMOENTIDADES_H__
 #define __ALGORITMOENTIDADES_H__
-#define tamano 50//tamaño de las cadenas
-#define anidado 11//numero maximo de anidaciones de una tributo compuesto numero de bloques
-#define atribute 11//numero maximo de atributos del atributo compuesto numero de palabras
 char compuestos[anidado][atribute][tamano];
 int nb=0,np=0,idkey=1;
 void whatIs(list **cab,list **table,char *line);
@@ -52,16 +49,16 @@ void putKey(list **cab,char *parofkey){
 	list *p;
 	char id[tamano]={0};
 	sprintf(id,"*%d&",idkey++);
-	for(p=*cab;p!=NULL&&strcmp(p->data,parofkey);p=p->next){;}
+	for(p=*cab;p!=NULL&&strcasecmp(p->data,parofkey);p=p->next){;}
 	if(p!=NULL)
 		strcat(p->data,id);
 }
 void serchCompuesto(list **cab,char *parofkey){
         int i,j;
         for(i=0;compuestos[i][0][0]!=0;i++){
-                if(!strcmp(parofkey,compuestos[i][0])){//lo encontro
+                if(!strcasecmp(parofkey,compuestos[i][0])){//lo encontro
                         for(j=1;compuestos[i][j][0]!=0;j++){
-                                if(!strcmp(compuestos[i][j],"next"))
+                                if(!strcasecmp(compuestos[i][j],"next"))
                                         serchCompuesto(cab,compuestos[i+1][0]);
                                 putKey(cab,compuestos[i][j]);
                         }

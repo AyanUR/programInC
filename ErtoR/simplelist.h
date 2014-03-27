@@ -1,12 +1,21 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 #ifndef __SIMPLELIST_H__
 #define __SIMPLELIST_H__
-#define size 50
+#define size 111
 typedef struct list{
 	char data[size];
 	struct list *next,*previous,*up,*down;
 }list;
+list *exist(list *cab,char *data){
+	while(cab!=NULL){
+		if(!strcasecmp(cab->data,data))
+			return cab;
+		cab=cab->next;
+	}
+	return NULL;
+}
 int requestMemory(list **nvo){
 	if((*nvo=(list*)malloc(sizeof(list)))==NULL){
 		printf("\nerror dont have more memory :( ");
@@ -25,7 +34,7 @@ int addElementLast(list **cab,char *data){
 	list *nvo,*p;
 	if(requestMemory(&nvo))
 		return 1;
-	memcpy(nvo->data,data,size);
+	strcpy(nvo->data,data);
 	if(*cab==NULL)
 		*cab=nvo;
 	else{
@@ -39,7 +48,7 @@ int addElementFirst(list **cab,char *data){
 	list *nvo;
 	if(requestMemory(&nvo))
 		return 1;
-	memcpy(nvo->data,data,size);
+	strcpy(nvo->data,data);
 	if(*cab!=NULL){
 		(*cab)->previous=nvo;
 		nvo->next=*cab;
@@ -57,7 +66,7 @@ int addElementForIndex(list **cab,char *data,int index){
 	}
 	if(requestMemory(&nvo))
 		return 1;
-	memcpy(nvo->data,data,size);
+	strcpy(nvo->data,data);
 	if((q=p->previous)!=NULL){
 		q->next=nvo;
 		nvo->previous=q;
@@ -68,7 +77,7 @@ int addElementForIndex(list **cab,char *data,int index){
 }
 /*int removeElementForData(list **cab,char *data){
 	list *p,*q,*r;
-	for(p=*cab;p!=NULL&&!strcmp(p->data,data);p=p->next){;}
+	for(p=*cab;p!=NULL&&!strcasecmp(p->data,data);p=p->next){;}
 	if(p==NULL){
 		printf("\ndata no exist in the list :( or the list is empty");
 		return 1;
