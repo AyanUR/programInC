@@ -114,7 +114,7 @@ void whatIs(list **cab,list **table,char *line){
 		case 'k':key(cab,&line[2]);break;
 		case 'c':compuesto(cab,table,&line[2]);break;
 		case 'm':multivaluados(cab,table,&line[2]);break;
-		case 'r':relacion(&line[2]);
+		case 'r':relacion(table,&line[2]);
 		case ';':
 			addRowforTable(table,cab);
 			bzero(compuestos,anidado*atribute*tamano*sizeof(char));

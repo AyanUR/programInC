@@ -8,4 +8,4 @@ E-Materia
 s-nombre,semestre,creditos
 k-nombre,semestre
 ;
-r-cursa-<Alumno,<Materia|m:n|p:t|s-finicio,ffinal
+r-cursa-<Alumno,<Materia|1:1|t:p|s-finicio,ffinal
